@@ -246,7 +246,7 @@ html {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(../img/banner.jpg);
+    url(../images/banner.jpg);
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -263,7 +263,7 @@ html {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),
-      url(../img/banner@2x.jpg);
+      url(../images/banner@2x.jpg);
   }
 }
 
@@ -403,7 +403,7 @@ html {
   position: absolute;
   content: '';
   display: inline-block;
-  background-image: url(../img/lines/green-lines.png);
+  background-image: url(../images/lines/green-lines.png);
   width: 164px;
   height: 15px;
   color: var(--main-color);
@@ -508,7 +508,9 @@ html {
 
 .item__action {
   position: absolute;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -629,7 +631,7 @@ html {
   position: absolute;
   content: '';
   display: inline-block;
-  background-image: url(../img/lines/green-lines.png);
+  background-image: url(../images/lines/green-lines.png);
   width: 164px;
   height: 15px;
   color: var(--main-color);
@@ -790,7 +792,7 @@ html {
   position: absolute;
   content: '';
   display: inline-block;
-  background-image: url(../img/lines/green-lines.png);
+  background-image: url(../images/lines/green-lines.png);
   width: 164px;
   height: 15px;
   color: var(--main-color);
@@ -869,8 +871,8 @@ html {
 /* newslatter */
 
 .section-newslatter {
-  background-image: url(../img/newslatter-background/background-newslatter1.png),
-    url(../img/newslatter-background/background-nwslatter2.jpg);
+  background-image: url(../images/newslatter-background/background-newslatter1.png),
+    url(../images/newslatter-background/background-nwslatter2.jpg);
 }
 
 .newslatter {
@@ -895,7 +897,7 @@ html {
 .newslatter__tittle:after {
   content: '';
   display: inline-block;
-  background-image: url(../img/lines/newslatter-whiteline.png);
+  background-image: url(../images/lines/newslatter-whiteline.png);
   position: absolute;
   width: 164px;
   height: 15px;
