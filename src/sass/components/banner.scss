@@ -1,0 +1,79 @@
+.banner-content {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/banner.jpg);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .banner-content {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(../images/banner@2x.jpg);
+  }
+}
+
+.container {
+  text-align: center;
+}
+
+.banner-content__first-string {
+  color: $color-for-strings;
+  font-family: $primery-font;
+  font-size: 48px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+
+.banner-content__second-string {
+  color: $color-for-strings;
+  font-family: $secondary-font;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 44px;
+}
+
+.banner-content__and {
+  color: $color-main;
+  font-family: $primery-font;
+  font-weight: 700;
+}
+
+.banner-content__sale {
+  color: $color-main;
+  font-family: $secondary-font;
+  font-weight: 600;
+}
+
+.banner-content__buy-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $color-for-links;
+  width: 120px;
+  height: 42px;
+  border: 2px solid $color-main;
+  background-color: $color-main;
+  margin: 0 auto;
+  transition: color $transition-time $transition-function;
+
+  &:hover,
+  &:focus {
+    color: $color-for-price;
+  }
+}

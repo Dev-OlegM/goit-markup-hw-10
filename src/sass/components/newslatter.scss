@@ -1,0 +1,92 @@
+.section-newslatter {
+  background-image: url(../images/newslatter-background/background-newslatter1.png),
+    url(../images/newslatter-background/background-nwslatter2.jpg);
+}
+
+.newslatter {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-top: 104px;
+  padding-bottom: 135px;
+  text-align: center;
+}
+
+.newslatter__tittle {
+  margin: 0;
+  padding: 0;
+  color: $color-for-product;
+  font-family: $primery-font;
+  font-size: 48px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.newslatter__tittle:after {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/lines/newslatter-whiteline.png);
+  position: absolute;
+  width: 164px;
+  height: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 166px;
+}
+
+.newslatter-button {
+  position: absolute;
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 89px;
+  height: 56px;
+  border-radius: 0 5px 5px 0;
+  background-color: transparent;
+  background-color: $color-for-readmore;
+  top: 280px;
+  left: 735px;
+  transition: background-color $transition-time $transition-function;
+
+  &:hover {
+    background-color: $color-main;
+    cursor: pointer;
+  }
+}
+
+.newslatter-button__icon {
+  margin: 0;
+  padding: 0;
+  width: 89px;
+  height: 56px;
+  fill: $color-primary-white;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.newslatter__follow {
+  margin: 0;
+  padding: 0;
+  margin-top: 72px;
+  color: $color-for-links;
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.newslatter__input-area {
+  display: inline-block;
+  width: 540px;
+  height: 59px;
+  border-radius: 5px;
+  background-color: $color-for-links;
+  margin-top: 44px;
+  color: $color-text-grey;
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  resize: none;
+}

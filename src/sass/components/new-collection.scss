@@ -1,0 +1,230 @@
+.new-collection {
+  background-color: $color-backgroung-white;
+}
+
+.new-collection .container {
+  padding-top: 100px;
+  position: relative;
+}
+
+.section-title::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background-image: url(../images/lines/green-lines.png);
+  width: 164px;
+  height: 15px;
+  color: $color-main;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 166px;
+}
+
+.item-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 96px;
+}
+
+.item-list :last-child {
+  margin-right: 0;
+}
+
+.item {
+  margin-right: 30px;
+  width: 255px;
+  height: 322px;
+  background-color: $color-for-links;
+  overflow: hidden;
+}
+
+.item__descr,
+.item__price {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: relative;
+
+  &:hover .item__descr {
+    background-color: $color-main;
+  }
+
+  &:hover .item__price {
+    background-color: $color-for-price;
+  }
+}
+
+.item__descr {
+  width: 255px;
+  height: 40px;
+  background-color: #323232;
+  color: $color-for-links;
+  font-family: $primery-font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+  position: absolute;
+  padding-left: 14px;
+  transition: background-color $transition-time $transition-function;
+}
+
+.item__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: $primery-font;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: #8c8c8c;
+  width: 55px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  color: $color-for-links;
+  transition: background-color $transition-time $transition-function;
+}
+
+.item__overlay {
+  overflow: hidden;
+
+  &:hover .item__action {
+    opacity: 1;
+  }
+}
+
+.item__overlay::before {
+  display: flex;
+  content: '';
+  position: absolute;
+  width: 234px;
+  height: 266px;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(104%);
+  transition: transform 250ms;
+}
+
+.item__overlay:hover::before {
+  display: flex;
+  transform: translateY(0);
+}
+
+.item__action {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 250ms;
+  transition-delay: 250ms;
+}
+
+.item__btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  transition: background-color $transition-time $transition-function;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  margin-right: 4px;
+
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+.item__btnadd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 166px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  margin-top: 7px;
+  transition: background-color $transition-time $transition-function;
+
+  &:hover,
+  &:focus {
+    background-color: #323232;
+    cursor: pointer;
+  }
+}
+
+.item__btn--button-like {
+  display: block;
+  border: 0;
+  padding: 10px;
+  fill: $color-primary-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    cursor: pointer;
+  }
+}
+
+.item__btn--button-review {
+  display: block;
+  border: 0;
+  padding: 10px;
+  fill: $color-primary-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    cursor: pointer;
+  }
+}
+
+.item__btn--button-clock {
+  display: block;
+  border: 0;
+  padding: 10px;
+  fill: $color-primary-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    cursor: pointer;
+  }
+}
+
+.item__btn--button-addcard {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  fill: $color-primary-white;
+}
+
+.item__btn--addtocard-text {
+  margin: 0;
+  padding: 0;
+  color: $color-primary-white;
+  font-size: 15px;
+}

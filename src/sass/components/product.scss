@@ -1,0 +1,132 @@
+.product .container {
+  position: relative;
+  padding-top: 104px;
+}
+
+// .section-title::after {
+//   position: absolute;
+//   content: '';
+//   display: inline-block;
+//   background-image: url(../images/lines/green-lines.png);
+//   width: 164px;
+//   height: 15px;
+//   color: $color-main;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   top: 0;
+// }
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
+  padding-bottom: 100px;
+}
+
+.gallery-list__action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 250ms;
+  transition-delay: 250ms;
+}
+
+.gallery-list__item {
+  display: flex;
+  width: 255px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &:nth-child(4n) {
+    margin-right: 0px;
+  }
+
+  &:nth-last-child(-n + 4) {
+    margin-bottom: 0px;
+  }
+}
+
+.gallery-list__link {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  width: 255px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover .gallery-list__action {
+    opacity: 1;
+  }
+
+  &:hover .gallery-list__descr {
+    background-color: $color-main;
+  }
+
+  &:hover .gallery-list__price {
+    background-color: $color-for-price;
+  }
+}
+
+.gallery-list__overlay::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 234px;
+  height: 266px;
+  top: 6px;
+  left: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(103%);
+  transition: transform $transition-time;
+}
+
+.gallery-list__overlay:hover::before {
+  transform: translateY(0);
+}
+
+.gallery-list__descr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 15px;
+  font-family: $primery-font;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: #323232;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  color: $color-for-links;
+  transition: background-color $transition-time $transition-function;
+}
+
+.gallery-list__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: $primery-font;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: #8c8c8c;
+  width: 55px;
+  height: 40px;
+  position: absolute;
+  color: $color-for-links;
+  right: 0;
+  transition: background-color $transition-time $transition-function;
+}
